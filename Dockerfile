@@ -1,7 +1,7 @@
 FROM node:22-alpine
 WORKDIR /app
-ARG APP_VERSION=1
-ARG BROKEN=false
+ARG APP_VERSION=2
+ARG BROKEN=true
 COPY package.json server.mjs ./
 RUN echo "{\"version\":\"${APP_VERSION}\",\"broken\":${BROKEN}}" > version.json
 USER node
